@@ -1,0 +1,8 @@
+para integrar Tailwind
+
+npx astro add tailwind
+
+
+para integrar React
+
+npx astro add react
