@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "¡Descuentos de Verano!",
+    "url": "https://example.com/banners/banner-verano.jpg",
+    "descripcion": "Aprovecha hasta un 50% de descuento en productos seleccionados. Solo por tiempo limitado.",
+    "tiempo": 8
+  },
+  {
+    "titulo": "Nuevo Lanzamiento: Serie X",
+    "url": "https://example.com/banners/banner-lanzamiento.jpg",
+    "descripcion": "Descubre la nueva Serie X con tecnología de última generación. ¡Ya disponible!",
+    "tiempo": 10
+  },
+  {
+    "titulo": "Envío Gratis",
+    "url": "https://example.com/banners/banner-envio-gratis.jpg",
+    "descripcion": "Envío gratis por compras superiores a $100. Aplica para todo el país.",
+    "tiempo": 7
+  },
+  {
+    "titulo": "Promoción 2x1",
+    "url": "https://example.com/banners/banner-2x1.jpg",
+    "descripcion": "Llévate dos productos y paga solo uno en nuestra categoría de hogar.",
+    "tiempo": 9
+  },
+  {
+    "titulo": "Regalos por tu compra",
+    "url": "https://example.com/banners/banner-regalo.jpg",
+    "descripcion": "Recibe un regalo sorpresa por cada compra mayor a $200 durante este mes.",
+    "tiempo": 6
+  }
+]

@@ -1,0 +1,75 @@
+---
+import { banners } from "../const/Banners";
+---
+
+<div class="relative mx-auto max-w-5xl h-[250px] overflow-hidden rounded-2xl mt-8">
+  {
+    banners.map((banner, index) => (
+      <a href={banner.link || "#categorias"}>
+        <div
+          class={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+            index === 0 ? "opacity-100 z-20" : "opacity-0 z-10"
+          }`}
+          style={`background-image: url(${banner.url}); background-size: cover; background-position: center;`}
+          id={`banner-${index}`}
+        >
+          <div class="bg-black/50 w-full h-full flex flex-col justify-center items-start p-8 text-white">
+            <h2 class="text-3xl mt-30 font-bold">{banner.titulo}</h2>
+            <p class="mt-2 text-lg">{banner.descripcion}</p>
+          </div>
+        </div>
+      </a>
+    ))
+  }
+
+  <!-- Botones izquierda / derecha -->
+  <button
+    id="prev-btn"
+    class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full z-30"
+    aria-label="Anterior"
+  >
+    ‹
+  </button>
+
+  <button
+    id="next-btn"
+    class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full z-30"
+    aria-label="Siguiente"
+  >
+    ›
+  </button>
+</div>
+
+<script type="module">
+  let current = 0;
+  const banners = [];
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll('[id^="banner-"]');
+    slides.forEach((el) => banners.push(el));
+
+    const showSlide = (index) => {
+      banners.forEach((el, i) => {
+        el.classList.toggle("opacity-100", i === index);
+        el.classList.toggle("opacity-0", i !== index);
+        el.classList.toggle("z-20", i === index);
+        el.classList.toggle("z-10", i !== index);
+      });
+    };
+
+    document.getElementById("prev-btn").addEventListener("click", () => {
+      current = (current - 1 + banners.length) % banners.length;
+      showSlide(current);
+    });
+
+    document.getElementById("next-btn").addEventListener("click", () => {
+      current = (current + 1) % banners.length;
+      showSlide(current);
+    });
+
+    setInterval(() => {
+      current = (current + 1) % banners.length;
+      showSlide(current);
+    }, 2000);
+  });
+</script>
