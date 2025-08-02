@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useProductsApi } from "../components/ProductsApi";
+import { useProductsApi } from "../hooks/ProductsApi";
 
 const SYSTEM_PROMPT = `Eres un asesor experto en compras internacionales con casillero digital. Tu trabajo es recomendar  5 productos REALES con ofertas del momento disponibles en tiendas confiables ubicadas y para envío a EE.UU como Amazon, eBay, Walmart o Best Buy según lo que el usuario desea comprar.
 
@@ -24,10 +24,12 @@ const SYSTEM_PROMPT = `Eres un asesor experto en compras internacionales con cas
                   - Cada producto debe ser breve y visualmente útil.`;
 
 export default function SearchComponent() {
-  const { products, loading, error, searchProduct } = useProductsApi(SYSTEM_PROMPT);
+  const { products, loading, error, searchProduct } =
+    useProductsApi(SYSTEM_PROMPT);
 
   useEffect(() => {
-    const pregunta = "Dame 5 ofertas de productos que esten actualmente en descuento y que sean populares en Amazon, eBay o Walmart.";
+    const pregunta =
+      "Dame 5 ofertas de productos que esten actualmente en descuento y que sean populares en Amazon, eBay o Walmart.";
     searchProduct(pregunta);
   }, []);
 
@@ -41,8 +43,17 @@ export default function SearchComponent() {
           {products.map((p, i) => (
             <div key={i} className="p-4 border rounded bg-white shadow">
               <h4 className="font-bold">{p.nombre}</h4>
-              <p>USD {p.precio_usd.toFixed(2)} — COP {p.precio_cop.toLocaleString()}</p>
-              <a href={p.link} target="_blank" className="text-blue-600 underline text-sm">Ver producto</a>
+              <p>
+                USD {p.precio_usd.toFixed(2)} — COP{" "}
+                {p.precio_cop.toLocaleString()}
+              </p>
+              <a
+                href={p.link}
+                target="_blank"
+                className="text-blue-600 underline text-sm"
+              >
+                Ver producto
+              </a>
             </div>
           ))}
         </div>
