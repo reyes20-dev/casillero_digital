@@ -120,7 +120,7 @@ export default function SearchComponent() {
 
   return (
     <>
-      <div className="bg-white rounded-2xl shadow-lg p-6 max-w-4xl mx-auto mt-[-70px] relative z-10">
+      <div className="bg-white rounded-3xl shadow-lg p-6 max-w-5xl mx-auto mt-[-70px] relative z-10">
         <h2 className="text-gray-700 text-center mb-4">¿Qué producto deseas buscar?</h2>
         <div className="flex gap-4 mb-6">
           <input

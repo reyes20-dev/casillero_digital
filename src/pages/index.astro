@@ -5,6 +5,10 @@ import Layout from '../layouts/Layout.astro';
 import Categorias from '../components/Categorias.astro';
 import Banners from '../components/Banners.astro';
 import OfertasProductos from '../components/OfertasProductos.tsx';
+import Informacion from '../components/Informacion.astro';
+import Footer from '../components/Footer.astro';
+import Calculadora from '../components/Calculadora'
+
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -17,6 +21,8 @@ import OfertasProductos from '../components/OfertasProductos.tsx';
 	<SearchComponent client:load/>
 	<Banners/>
 	<Categorias/>
-	<OfertasProductos client:load/>
-
+	<!-- <OfertasProductos client:load/>-->
+	<Informacion/>
+	<Calculadora/ client:load></Calculadora>
+	<Footer/>
 </Layout> 

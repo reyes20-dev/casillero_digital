@@ -1,36 +1,92 @@
 ---
-console.log("javascript")
+
 ---
 
-<div class="flex flex-wrap justify-center gap-15 mt-15 ">
-    <button
-        type="button"
-        class="inline-flex items-center px-6 py-3 text-sm font-medium text-center text-white bg-gradient-to-r from-blue-400 to-blue-700 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:from-blue-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-200"
-    >
-        Electrónica
-    </button>
-    <button
-        type="button"
-        class="inline-flex items-center px-6 py-3 text-sm font-medium text-center text-white bg-gradient-to-r from-blue-400 to-blue-700 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:from-blue-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-200"
-    >
-        Ropa
-    </button>
-    <button
-        type="button"
-        class="inline-flex items-center px-6 py-3 text-sm font-medium text-center text-white bg-gradient-to-r from-blue-400 to-blue-700 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:from-blue-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-200"
-    >
-        Hogar
-    </button>
-    <button
-        type="button"
-        class="inline-flex items-center px-6 py-3 text-sm font-medium text-center text-white bg-gradient-to-r from-blue-400 to-blue-700 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:from-blue-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-200"
-    >
-        Deportes
-    </button>
-    <button
-        type="button"
-        class="inline-flex items-center px-6 py-3 text-sm font-medium text-center text-white bg-gradient-to-r from-blue-400 to-blue-700 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:from-blue-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-200"
-    >
-        Juguetes
-    </button>
+<div class="w-full text-center mt-10">
+    <h3 class="text-1xl font-semibold text-gray-700">Categorías</h3>
+</div>
+
+<div class="flex flex-wrap justify-center gap-40 mt-10 px-4">
+  <!-- Título -->
+  <!-- Tecnología -->
+  <div class="flex flex-col items-center group cursor-pointer">
+    <div class="w-25 h-25 bg-white rounded-full shadow-lg flex items-center justify-center mb-3 transition-all duration-300 hover:shadow-xl hover:scale-110 border border-gray-200">
+      <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center relative">
+        <!-- Monitor -->
+        <svg class="w-12 h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z"/>
+        </svg>
+      </div>
+    </div>
+    <span class="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors">Tecnología</span>
+  </div>
+
+  <!-- Belleza -->
+  <div class="flex flex-col items-center group cursor-pointer">
+    <div class="w-25 h-25 bg-white rounded-full shadow-lg flex items-center justify-center mb-3 transition-all duration-300 hover:shadow-xl hover:scale-110 border border-gray-200">
+      <div class="w-16 h-16 bg-pink-100 rounded-lg flex items-center justify-center">
+        <!-- Lápiz labial -->
+        <svg class="w-8 h-8 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+          <rect x="8" y="4" width="8" height="14" rx="4" fill="currentColor"/>
+          <rect x="9" y="2" width="6" height="4" rx="1" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+    <span class="text-sm font-medium text-gray-700 group-hover:text-pink-600 transition-colors">Belleza</span>
+  </div>
+
+  <!-- Hogar -->
+  <div class="flex flex-col items-center group cursor-pointer">
+    <div class="w-25 h-25 bg-white rounded-full shadow-lg flex items-center justify-center mb-3 transition-all duration-300 hover:shadow-xl hover:scale-110 border border-gray-200">
+      <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center">
+        <!-- Casa -->
+        <svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.7L18 11v8h-2v-6H8v6H6v-8l6-5.3z"/>
+          <!-- Ventanas -->
+          <rect x="9" y="13" width="2" height="2" fill="currentColor"/>
+          <rect x="13" y="13" width="2" height="2" fill="currentColor"/>
+          <!-- Puerta -->
+          <rect x="11" y="16" width="2" height="3" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+    <span class="text-sm font-medium text-gray-700 group-hover:text-orange-600 transition-colors">Hogar</span>
+  </div>
+
+  <!-- Libros -->
+  <div class="flex flex-col items-center group cursor-pointer">
+    <div class="w-25 h-25 bg-white rounded-full shadow-lg flex items-center justify-center mb-3 transition-all duration-300 hover:shadow-xl hover:scale-110 border border-gray-200">
+      <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center">
+        <!-- Libros apilados -->
+        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/>
+          <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H8V4h12v10z"/>
+          <!-- Líneas del libro -->
+          <rect x="10" y="6" width="8" height="1" fill="currentColor"/>
+          <rect x="10" y="8" width="6" height="1" fill="currentColor"/>
+          <rect x="10" y="10" width="8" height="1" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+    <span class="text-sm font-medium text-gray-700 group-hover:text-green-600 transition-colors">Libros</span>
+  </div>
+
+  <!-- Deporte -->
+  <div class="flex flex-col items-center group cursor-pointer">
+    <div class="w-25 h-25 bg-white rounded-full shadow-lg flex items-center justify-center mb-3 transition-all duration-300 hover:shadow-xl hover:scale-110 border border-gray-200">
+      <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+        <!-- Balón de fútbol -->
+        <svg class="w-8 h-8 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" fill="currentColor"/>
+          <!-- Pentágono central -->
+          <path d="M12 6l2.5 1.5L13 10h-2l-1.5-2.5L12 6z" fill="white"/>
+          <!-- Hexágonos -->
+          <path d="M9.5 7.5L8 10l1.5 2.5h3L14 10l-1.5-2.5h-3z" fill="white"/>
+          <path d="M12 14l2.5 1.5L13 18h-2l-1.5-2.5L12 14z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+    <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors">Deporte</span>
+  </div>
 </div>
