@@ -77,8 +77,8 @@ const ShippingCalculator = () => {
   ];
 
   const tiposCourier = [
-    { value: 'express', label: 'Courier Express (DHL, FedEx, UPS) - Rápido' },
-    { value: 'standard', label: 'Correo Certificado - Económico' }
+    { value: 'express', label: 'Express' },
+    { value: 'standard', label: 'Standar' }
   ];
 
   // Función para manejar cambios en cualquier input del formulario
